@@ -6,7 +6,7 @@ A beautiful, modern website for BEYOND facial rejuvenation services that combine
 
 - **Natural & Holistic Approach**: Face rejuvenation beyond filters, beyond fillers, beyond the surface
 - **Signature BEYOND Method**: A powerful blend of ancient wisdom and modern science
-- **Comprehensive Programs**: 
+- **Comprehensive Programs**:
   - One-to-One Zoom Sessions
   - Weekly Group Workshops
   - Face Yoga Classes

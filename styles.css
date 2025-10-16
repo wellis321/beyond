@@ -377,10 +377,31 @@ p {
     background: #f8f4f0;
     border-radius: 15px;
     transition: transform 0.3s ease;
+    overflow: hidden;
 }
 
 .method-item:hover {
     transform: translateY(-5px);
+}
+
+.method-image {
+    width: 100%;
+    height: 200px;
+    margin-bottom: 1.5rem;
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+}
+
+.method-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.method-item:hover .method-image img {
+    transform: scale(1.05);
 }
 
 .method-item h3 {
