@@ -7,7 +7,7 @@
     <title>BEYOND - Face Rejuvenation Beyond the Surface</title>
     <meta name="description"
         content="Restore your natural facial structure, strength & radiance. Face rejuvenation beyond filters, beyond fillers, beyond the surface.">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="beyond-styles.css">
     <link
         href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap"
         rel="stylesheet">
@@ -22,6 +22,7 @@
             </div>
             <div class="nav-menu">
                 <a href="#philosophy" class="nav-link">Philosophy</a>
+                <a href="#face-analysis" class="nav-link">Skin Analysis</a>
                 <a href="#about" class="nav-link">About</a>
                 <a href="#programs" class="nav-link">Programs</a>
                 <a href="#contact" class="nav-link">Contact</a>
@@ -36,6 +37,17 @@
 
     <!-- Hero Section -->
     <section class="hero">
+        <div class="clouds-container">
+            <div class="cloud cloud-small cloud-1"></div>
+            <div class="cloud cloud-large cloud-2"></div>
+            <div class="cloud cloud-medium cloud-3"></div>
+            <div class="cloud cloud-small cloud-4"></div>
+            <div class="cloud cloud-large cloud-5"></div>
+            <div class="cloud cloud-medium cloud-6"></div>
+            <div class="cloud cloud-small cloud-7"></div>
+            <div class="cloud cloud-fluffy cloud-8"></div>
+            <div class="cloud cloud-wispy cloud-9"></div>
+        </div>
         <div class="hero-container">
             <div class="hero-content">
                 <div class="hero-text">
@@ -47,8 +59,8 @@
                         Works</button>
                 </div>
                 <div class="hero-image">
-                    <img src="assets/images/general/eyes forehead.final.webp"
-                        alt="Beautiful facial rejuvenation - eyes and forehead" />
+                    <img src="assets/images/general/web 4-2-1 final.webp"
+                        alt="Beautiful facial rejuvenation - natural glow" />
                 </div>
             </div>
         </div>
@@ -110,6 +122,126 @@
                     <li>Poor posture & screen time</li>
                     <li>Daily habits that reshape the face</li>
                 </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Face Analysis Section -->
+    <section id="face-analysis" class="face-analysis-section">
+        <div class="container">
+            <h2 class="section-title">Discover Your Skin's Potential</h2>
+            <p class="analysis-intro">Get personalized insights about your skin and discover which BEYOND practices can
+                help you achieve your natural glow.</p>
+
+            <div class="analysis-container">
+                <div class="analysis-app">
+                    <div class="app-header">
+                        <h3>🌿 BEYOND Skin Analysis</h3>
+                        <p>AI-powered analysis to understand your skin's needs</p>
+                    </div>
+
+                    <div class="camera-section">
+                        <div class="video-container">
+                            <video id="video" autoplay muted playsinline></video>
+                            <canvas id="output"></canvas>
+                            <div class="face-guide">
+                                <div class="guide-oval"></div>
+                            </div>
+                        </div>
+                        <p class="guide-text">Position your face within the guide</p>
+
+                        <div class="controls">
+                            <button id="startCamera" class="cta-button secondary">📷 Start Analysis</button>
+                            <button id="analyzeBtn" class="cta-button primary" disabled>🔍 Analyze Skin</button>
+                            <button id="captureBtn" class="cta-button accent" disabled>📸 Capture</button>
+                        </div>
+                    </div>
+
+                    <!-- Analysis Results -->
+                    <div id="analysisSection" class="analysis-results" style="display: none;">
+                        <div class="results-header">
+                            <h3>Your BEYOND Analysis</h3>
+                            <p>Based on your results, here are personalized recommendations:</p>
+                        </div>
+
+                        <div class="scores-grid">
+                            <div class="score-item">
+                                <div class="score-label">Overall</div>
+                                <div class="score-value" id="overallScore">--</div>
+                                <div class="score-description" id="overallLabel">--</div>
+                            </div>
+                            <div class="score-item">
+                                <div class="score-label">Smoothness</div>
+                                <div class="score-value" id="smoothnessScore">--</div>
+                            </div>
+                            <div class="score-item">
+                                <div class="score-label">Evenness</div>
+                                <div class="score-value" id="evennessScore">--</div>
+                            </div>
+                            <div class="score-item">
+                                <div class="score-label">Clarity</div>
+                                <div class="score-value" id="clarityScore">--</div>
+                            </div>
+                        </div>
+
+                        <div class="recommendations-section">
+                            <h4>Personalized BEYOND Recommendations</h4>
+                            <ul id="recommendationsList" class="recommendations-list">
+                                <!-- Recommendations will be populated here -->
+                            </ul>
+                        </div>
+
+                        <div class="action-buttons">
+                            <button class="cta-button primary"
+                                onclick="document.getElementById('programs').scrollIntoView({behavior: 'smooth'})">View
+                                Programs</button>
+                            <button class="cta-button secondary"
+                                onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'})">Book
+                                Consultation</button>
+                            <button id="retakeBtn" class="cta-button outline">Retake Analysis</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="analysis-benefits">
+                    <h3>Why Analyze Your Skin?</h3>
+                    <div class="benefit-list">
+                        <div class="benefit-item">
+                            <span class="benefit-icon">🎯</span>
+                            <div class="benefit-content">
+                                <h4>Personalized Approach</h4>
+                                <p>Get specific recommendations tailored to your skin's unique needs</p>
+                            </div>
+                        </div>
+                        <div class="benefit-item">
+                            <span class="benefit-icon">🔬</span>
+                            <div class="benefit-content">
+                                <h4>Scientific Analysis</h4>
+                                <p>Advanced computer vision technology provides accurate skin assessment</p>
+                            </div>
+                        </div>
+                        <div class="benefit-item">
+                            <span class="benefit-icon">💡</span>
+                            <div class="benefit-content">
+                                <h4>Actionable Insights</h4>
+                                <p>Connect directly to BEYOND programs and products that can help</p>
+                            </div>
+                        </div>
+                        <div class="benefit-item">
+                            <span class="benefit-icon">🔒</span>
+                            <div class="benefit-content">
+                                <h4>Privacy First</h4>
+                                <p>All analysis happens on your device - your images never leave your phone</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="analysis-disclaimer">
+                <p><strong>Educational Tool:</strong> This analysis is for educational purposes only and is not a
+                    substitute for professional dermatological consultation. Results are based on computer vision
+                    algorithms and general skincare principles.</p>
             </div>
         </div>
     </section>
@@ -395,7 +527,8 @@
         </div>
     </footer>
 
-    <script src="script.js"></script>
+    <script async src="https://docs.opencv.org/4.8.0/opencv.js"></script>
+    <script src="beyond-script.js"></script>
 </body>
 
 </html>

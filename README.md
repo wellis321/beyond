@@ -1,58 +1,122 @@
-# BEYOND - Face Rejuvenation Website
+# 🌿 SkinCare Analyzer
 
-A beautiful, modern website for BEYOND facial rejuvenation services that combines face yoga, gua sha, osteopathic principles, and breathwork for natural beauty and wellness.
+An AI-powered skincare analysis application that uses computer vision to analyze skin quality and provide personalized recommendations.
 
-## 🌟 Features
+## Features
 
-- **Natural & Holistic Approach**: Face rejuvenation beyond filters, beyond fillers, beyond the surface
-- **Signature BEYOND Method**: A powerful blend of ancient wisdom and modern science
-- **Comprehensive Programs**:
-  - One-to-One Zoom Sessions
-  - Weekly Group Workshops
-  - Face Yoga Classes
-- **Beautiful Design**: Modern, responsive design with natural color palette
-- **Mobile Optimized**: Perfect experience on all devices
+- 📷 **Real-time Camera Access** - Uses WebRTC to access device camera
+- 🎯 **Face Detection** - Powered by MediaPipe for accurate face detection
+- 🔍 **Skin Analysis** - Uses OpenCV.js for advanced image processing
+- 📊 **Quality Metrics** - Analyzes smoothness, evenness, and clarity
+- 💡 **Smart Recommendations** - Provides personalized skincare advice
+- 📱 **Responsive Design** - Works on desktop and mobile devices
 
-## 🚀 Live Website
+## Technology Stack
 
-Visit the live website at: [https://wellis321.github.io/beyond/](https://wellis321.github.io/beyond/)
+- **Frontend**: HTML5, CSS3, JavaScript (ES6+)
+- **Computer Vision**:
+  - [MediaPipe](https://mediapipe.dev/) for face detection
+  - [OpenCV.js](https://docs.opencv.org/4.8.0/opencv.js) for image processing
+- **Camera API**: WebRTC getUserMedia
+- **Styling**: Modern CSS with gradients and animations
 
-## 🛠️ Technologies Used
+## How It Works
 
-- **HTML5**: Semantic, accessible markup
-- **CSS3**: Modern styling with Flexbox and Grid
-- **JavaScript**: Interactive features and smooth animations
-- **GitHub Pages**: Free hosting and deployment
+1. **Camera Access**: The app requests camera permission and displays live video feed
+2. **Face Detection**: MediaPipe continuously detects faces in the video stream
+3. **Image Capture**: When a face is detected with high confidence, user can capture a photo
+4. **Skin Analysis**: OpenCV.js processes the image using multiple algorithms:
+   - **Smoothness**: Texture analysis using Gaussian blur difference
+   - **Evenness**: Color distribution analysis in Lab color space
+   - **Clarity**: Blemish detection using HSV color space
+5. **Results Display**: Shows scores and generates personalized recommendations
 
-## 📱 Services Offered
+## Installation & Usage
 
-### One-to-One Zoom Programme
-- 4 x 45 mins over 1 month
-- Tailored support + sample products + worksheets
-- Noticeable lift, tone, radiance
-- Build routines you can maintain yourself
+### Prerequisites
+- Modern web browser with camera support
+- HTTPS connection (required for camera access in production)
 
-### Weekly Online Group Workshops
-- £20 (45 mins)
-- Various themes: Full face rejuvenation, Strong eyelids, Radiant eyes, etc.
-- Step-by-step learning with personalized feedback
+### Running the App
 
-### Weekly Face Yoga Classes
-- £25 per person / £250 per group (up to 12)
-- Live coaching + corrections + tailored variations
-- Includes warm-up, cool-down, posture and relaxation
+1. **Clone or download the project files**
 
-## 🎨 Design Philosophy
+2. **Install dependencies** (optional - uses CDN by default):
+   ```bash
+   npm install
+   ```
 
-The website reflects the BEYOND philosophy:
-- **NATURAL**: Your body already knows how to lift, heal and glow
-- **HOLISTIC**: Face, body, posture, breath, emotions—connected
-- **SELF-SUSTAINING**: Not a treatment you depend on. A method you own
+3. **Start the development server**:
+   ```bash
+   npm run dev
+   ```
 
-## 📞 Contact
+4. **Open your browser** and navigate to `http://localhost:3000`
 
-Ready to go BEYOND? Get in touch through the website contact form or reach out directly.
+5. **Allow camera access** when prompted
 
----
+6. **Follow the on-screen instructions** to analyze your skin
 
-*True beauty isn't injected or airbrushed… it's activated.*
+## Usage Instructions
+
+1. Click "📷 Start Camera" to begin
+2. Position your face within the guide circle
+3. Wait for the green detection box to appear
+4. Click "📸 Capture" when ready
+5. Click "🔍 Analyze Skin" to process the image
+6. Review your results and recommendations
+7. Use "🔄 Retake Photo" to try again or "💾 Save Results" to save
+
+## Analysis Metrics
+
+### Overall Quality Score (0-100)
+- **80-100**: Excellent skin quality
+- **60-79**: Good skin condition
+- **40-59**: Fair, room for improvement
+- **0-39**: Needs attention
+
+### Individual Metrics
+
+- **Smoothness**: Analyzes skin texture and roughness
+- **Evenness**: Measures skin tone uniformity
+- **Clarity**: Detects blemishes and dark spots
+
+## Browser Compatibility
+
+- ✅ Chrome 80+
+- ✅ Firefox 75+
+- ✅ Safari 13+
+- ✅ Edge 80+
+
+## Privacy & Security
+
+- All image processing happens locally in your browser
+- No images are sent to external servers
+- Camera access is only used for analysis
+- Results can be saved locally (demo mode logs to console)
+
+## Limitations
+
+- Analysis is for educational/demonstration purposes
+- Results should not replace professional dermatological advice
+- Requires good lighting for accurate analysis
+- Works best with clear, front-facing photos
+
+## Contributing
+
+This is a demonstration project using open source technologies. Feel free to:
+- Fork and modify for your needs
+- Add new analysis algorithms
+- Improve the UI/UX
+- Add new features
+
+## License
+
+MIT License - Feel free to use and modify as needed.
+
+## Acknowledgments
+
+- [MediaPipe](https://mediapipe.dev/) for face detection
+- [OpenCV.js](https://docs.opencv.org/4.8.0/opencv.js) for computer vision
+- WebRTC for camera access
+- Modern CSS techniques for beautiful UI

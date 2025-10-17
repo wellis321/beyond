@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How It Works - SkinCare Analyzer</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header class="header">
+        <div class="container">
+            <h1>🌿 How It Works</h1>
+            <nav class="nav">
+                <a href="index.html" class="nav-link">← Back to Analyzer</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="main">
+        <div class="container">
+            <section class="how-it-works-section">
+                <div class="intro">
+                    <h2>Understanding Your Skin Analysis</h2>
+                    <p>Our SkinCare Analyzer uses advanced computer vision technology to analyze your skin quality.
+                        Here's how it works:</p>
+                </div>
+
+                <div class="process-steps">
+                    <div class="step">
+                        <div class="step-number">1</div>
+                        <div class="step-content">
+                            <h3>📸 Image Capture</h3>
+                            <p>We capture a high-quality image of your face using your device's camera. The image is
+                                processed locally on your device to ensure privacy.</p>
+                        </div>
+                    </div>
+
+                    <div class="step">
+                        <div class="step-number">2</div>
+                        <div class="step-content">
+                            <h3>🔍 Computer Vision Analysis</h3>
+                            <p>Using OpenCV.js technology, we analyze your image in three key areas to assess your skin
+                                quality.</p>
+                        </div>
+                    </div>
+
+                    <div class="step">
+                        <div class="step-number">3</div>
+                        <div class="step-content">
+                            <h3>📊 Scoring & Recommendations</h3>
+                            <p>Based on the analysis, we generate personalized scores and skincare recommendations
+                                tailored to your results.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="analysis-breakdown">
+                    <h2>What We Analyze</h2>
+
+                    <div class="analysis-cards">
+                        <div class="analysis-card">
+                            <div class="card-icon">✨</div>
+                            <h3>Smoothness</h3>
+                            <p>Measures skin texture and surface irregularities by analyzing how light reflects off your
+                                skin. Higher scores indicate smoother, more refined skin texture.</p>
+                            <div class="how-measured">
+                                <strong>How it's measured:</strong> Computer vision algorithms detect texture variations
+                                by comparing your skin's surface patterns.
+                            </div>
+                        </div>
+
+                        <div class="analysis-card">
+                            <div class="card-icon">🎨</div>
+                            <h3>Evenness</h3>
+                            <p>Evaluates skin tone uniformity and color distribution. This helps identify areas of
+                                hyperpigmentation or uneven skin tone.</p>
+                            <div class="how-measured">
+                                <strong>How it's measured:</strong> Analyzes color consistency across your skin using
+                                advanced color space algorithms.
+                            </div>
+                        </div>
+
+                        <div class="analysis-card">
+                            <div class="card-icon">🔍</div>
+                            <h3>Clarity</h3>
+                            <p>Detects blemishes, dark spots, and skin impurities to assess overall skin clarity and
+                                health.</p>
+                            <div class="how-measured">
+                                <strong>How it's measured:</strong> Identifies potential blemishes and spots using
+                                sophisticated image processing techniques.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="scoring-system">
+                    <h2>Understanding Your Scores</h2>
+                    <div class="score-ranges">
+                        <div class="score-range excellent">
+                            <div class="range-label">80-100</div>
+                            <div class="range-title">Excellent</div>
+                            <div class="range-description">Your skin is in great condition! Keep up your current
+                                routine.</div>
+                        </div>
+                        <div class="score-range good">
+                            <div class="range-label">60-79</div>
+                            <div class="range-title">Good</div>
+                            <div class="range-description">Your skin looks healthy with minor areas for improvement.
+                            </div>
+                        </div>
+                        <div class="score-range fair">
+                            <div class="range-label">40-59</div>
+                            <div class="range-title">Fair</div>
+                            <div class="range-description">There's room for improvement in your skincare routine.</div>
+                        </div>
+                        <div class="score-range needs-attention">
+                            <div class="range-label">0-39</div>
+                            <div class="range-title">Needs Attention</div>
+                            <div class="range-description">Consider establishing a more consistent skincare routine.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="recommendations-explanation">
+                    <h2>How Recommendations Are Generated</h2>
+                    <p>Our recommendations are based on established dermatological principles and your specific analysis
+                        results:</p>
+
+                    <div class="recommendation-logic">
+                        <div class="logic-item">
+                            <div class="logic-icon">✨</div>
+                            <div class="logic-content">
+                                <h4>Low Smoothness Score</h4>
+                                <p>→ Suggests gentle exfoliation to improve texture</p>
+                            </div>
+                        </div>
+                        <div class="logic-item">
+                            <div class="logic-icon">🎨</div>
+                            <div class="logic-content">
+                                <h4>Low Evenness Score</h4>
+                                <p>→ Recommends vitamin C for skin tone improvement</p>
+                            </div>
+                        </div>
+                        <div class="logic-item">
+                            <div class="logic-icon">🔍</div>
+                            <div class="logic-content">
+                                <h4>Low Clarity Score</h4>
+                                <p>→ Suggests salicylic acid for blemish control</p>
+                            </div>
+                        </div>
+                        <div class="logic-item">
+                            <div class="logic-icon">💧</div>
+                            <div class="logic-content">
+                                <h4>Overall Low Score</h4>
+                                <p>→ Emphasizes consistent routine and hydration</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="important-disclaimer">
+                    <h2>⚠️ Important Disclaimer</h2>
+                    <div class="disclaimer-content">
+                        <p><strong>This tool is for educational and entertainment purposes only.</strong> It is not
+                            intended to replace professional dermatological consultation or medical advice.</p>
+                        <ul>
+                            <li>Results are based on computer vision algorithms, not medical diagnosis</li>
+                            <li>Always consult a dermatologist for serious skin concerns</li>
+                            <li>Individual skin types and conditions vary greatly</li>
+                            <li>Recommendations are general guidelines, not personalized medical advice</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="technology-info">
+                    <h2>Technology Behind the Analysis</h2>
+                    <div class="tech-stack">
+                        <div class="tech-item">
+                            <h4>OpenCV.js</h4>
+                            <p>Advanced computer vision library for image processing and analysis</p>
+                        </div>
+                        <div class="tech-item">
+                            <h4>Color Space Analysis</h4>
+                            <p>Uses RGB, HSV, and LAB color spaces for comprehensive skin evaluation</p>
+                        </div>
+                        <div class="tech-item">
+                            <h4>Texture Analysis</h4>
+                            <p>Gaussian blur algorithms to detect skin surface irregularities</p>
+                        </div>
+                        <div class="tech-item">
+                            <h4>Local Processing</h4>
+                            <p>All analysis happens on your device - your images never leave your phone</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 SkinCare Analyzer | <a href="index.html">Back to Analyzer</a></p>
+        </div>
+    </footer>
+
+    <script>
+        // Add some interactive elements
+        document.addEventListener('DOMContentLoaded', function () {
+            // Add smooth scrolling for any internal links
+            const links = document.querySelectorAll('a[href^="#"]');
+            links.forEach(link => {
+                link.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const target = document.querySelector(this.getAttribute('href'));
+                    if (target) {
+                        target.scrollIntoView({ behavior: 'smooth' });
+                    }
+                });
+            });
+
+            // Add fade-in animation for cards
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            };
+
+            const observer = new IntersectionObserver(function (entries) {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = '1';
+                        entry.target.style.transform = 'translateY(0)';
+                    }
+                });
+            }, observerOptions);
+
+            // Observe all cards and steps
+            const animatedElements = document.querySelectorAll('.step, .analysis-card, .score-range, .logic-item, .tech-item');
+            animatedElements.forEach(el => {
+                el.style.opacity = '0';
+                el.style.transform = 'translateY(20px)';
+                el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+                observer.observe(el);
+            });
+        });
+    </script>
+</body>
+
+</html>

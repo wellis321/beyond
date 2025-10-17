@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SkinCare Analyzer</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- MediaPipe for face detection -->
+    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/camera_utils/camera_utils.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/control_utils/control_utils.js"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/drawing_utils/drawing_utils.js"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/face_detection/face_detection.js"
+        crossorigin="anonymous"></script>
+    <!-- OpenCV.js for image processing -->
+    <script async src="https://docs.opencv.org/4.8.0/opencv.js" crossorigin="anonymous"></script>
+
+    <!-- Error handling for CDN failures -->
+    <script>
+        // Check if running on HTTPS (required for camera access)
+        if (location.protocol !== 'https:' && location.hostname !== 'localhost') {
+            console.warn('Camera access requires HTTPS');
+        }
+
+        // Fallback for CDN failures
+        window.addEventListener('error', function (e) {
+            if (e.target.tagName === 'SCRIPT') {
+                console.error('Failed to load script:', e.target.src);
+                // Could implement fallback loading here
+            }
+        });
+    </script>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1>🌿 SkinCare Analyzer</h1>
+            <p>Analyze your skin quality using AI-powered computer vision</p>
+            <nav class="main-nav">
+                <a href="how-it-works.html" class="nav-link">How It Works</a>
+                <a href="index.html" class="nav-link">Visit BEYOND</a>
+            </nav>
+        </header>
+
+        <main>
+            <div class="camera-section">
+                <div class="video-container">
+                    <video id="video" autoplay muted playsinline></video>
+                    <canvas id="output"></canvas>
+                    <div class="camera-overlay">
+                        <div class="face-guide"></div>
+                        <p class="instruction">Position your face within the guide</p>
+                    </div>
+                </div>
+
+                <div class="controls">
+                    <button id="startCamera" class="btn btn-primary">📷 Start Camera</button>
+                    <button id="analyze" class="btn btn-secondary" disabled>🔍 Analyze Skin</button>
+                    <button id="capture" class="btn btn-capture" disabled>📸 Capture</button>
+                </div>
+            </div>
+
+            <div class="analysis-section" id="analysisSection" style="display: none;">
+                <h2>Analysis Results</h2>
+                <div class="results-grid">
+                    <div class="result-card">
+                        <h3>Overall Quality</h3>
+                        <div class="score" id="overallScore">--</div>
+                        <div class="score-label" id="overallLabel">Calculating...</div>
+                    </div>
+
+                    <div class="result-card">
+                        <h3>Smoothness</h3>
+                        <div class="score" id="smoothnessScore">--</div>
+                        <div class="score-label">Texture Analysis</div>
+                    </div>
+
+                    <div class="result-card">
+                        <h3>Evenness</h3>
+                        <div class="score" id="evennessScore">--</div>
+                        <div class="score-label">Tone Analysis</div>
+                    </div>
+
+                    <div class="result-card">
+                        <h3>Clarity</h3>
+                        <div class="score" id="clarityScore">--</div>
+                        <div class="score-label">Blemish Analysis</div>
+                    </div>
+                </div>
+
+                <div class="recommendations">
+                    <h3>💡 Recommendations</h3>
+                    <ul id="recommendationsList">
+                        <li>Analysis in progress...</li>
+                    </ul>
+                </div>
+
+                <div class="actions">
+                    <button id="retake" class="btn btn-outline">🔄 Retake Photo</button>
+                    <button id="saveResults" class="btn btn-primary">💾 Save Results</button>
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <p>Powered by MediaPipe & OpenCV.js | <a href="#" id="privacy">Privacy Policy</a></p>
+        </footer>
+    </div>
+
+    <!-- Loading indicator -->
+    <div id="loading" class="loading-overlay" style="display: none;">
+        <div class="loading-spinner"></div>
+        <p>Analyzing your skin...</p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
