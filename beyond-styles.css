@@ -663,37 +663,54 @@ p {
     font-weight: 500;
 }
 
-.philosophy-challenges {
+.philosophy-services {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.service-card {
     background: white;
-    padding: 3rem;
+    padding: 2.5rem;
     border-radius: 20px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    text-align: center;
 }
 
-.philosophy-challenges h3 {
-    color: #2c3e50;
-    margin-bottom: 1.5rem;
+.service-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
 }
 
-.philosophy-challenges ul {
-    list-style: none;
-    padding: 0;
+.service-icon {
+    width: 64px;
+    height: 64px;
+    margin: 0 auto 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-.philosophy-challenges li {
-    padding: 0.5rem 0;
-    font-size: 1.1rem;
-    color: #5a6c7d;
-    position: relative;
-    padding-left: 2rem;
+.service-icon svg {
+    width: 100%;
+    height: 100%;
 }
 
-.philosophy-challenges li::before {
-    content: '•';
+.service-card h3 {
     color: #8B5A3C;
-    font-weight: bold;
-    position: absolute;
-    left: 0;
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
+
+.service-card p {
+    color: #5a6c7d;
+    font-size: 1rem;
+    line-height: 1.6;
+    margin: 0;
 }
 
 /* Method Section */
@@ -1238,6 +1255,7 @@ p {
     }
 
     .philosophy-grid,
+    .philosophy-services,
     .method-grid,
     .work-grid,
     .program-details {
@@ -1632,8 +1650,17 @@ p {
 }
 
 .benefit-icon {
-    font-size: 2rem;
+    width: 48px;
+    height: 48px;
     flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.benefit-icon svg {
+    width: 100%;
+    height: 100%;
 }
 
 .benefit-content h4 {
