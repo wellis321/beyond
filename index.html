@@ -494,7 +494,7 @@
                 <p class="series-description">For all ages and genders across Scotland's central belt</p>
 
                 <div class="program-slider-container">
-                    <button class="slider-arrow slider-arrow-left" onclick="slidePrograms('left')">‹</button>
+                    <button class="slider-arrow slider-arrow-left" onclick="slidePrograms('left', this)">‹</button>
                     <div class="program-slider">
                         <div class="program-grid-with-images">
                             <div class="program-card-with-image">
@@ -643,7 +643,7 @@
                             </div>
                         </div>
                     </div>
-                    <button class="slider-arrow slider-arrow-right" onclick="slidePrograms('right')">›</button>
+                    <button class="slider-arrow slider-arrow-right" onclick="slidePrograms('right', this)">›</button>
                 </div>
             </div>
 
@@ -699,54 +699,62 @@
             <!-- Scottish Online International Series -->
             <div class="program-series">
                 <h3 class="series-title">Scottish Online International Series</h3>
-                <div class="program-details">
-                    <div class="program-card-with-image">
-                        <div class="program-image">
-                            <img src="assets/images/general/international/highland restore-1.webp"
-                                alt="Highland Restore Ritual" />
-                        </div>
-                        <div class="program-card-content">
-                            <h3>Highland Restore Ritual</h3>
-                            <p class="program-description">Deep release, nervous system calm</p>
+                <p class="series-description">Online programs available internationally</p>
+
+                <div class="program-slider-container">
+                    <button class="slider-arrow slider-arrow-left" onclick="slidePrograms('left', this)">‹</button>
+                    <div class="program-slider">
+                        <div class="program-grid-with-images">
+                            <div class="program-card-with-image">
+                                <div class="program-image">
+                                    <img src="assets/images/general/international/highland restore-1.webp"
+                                        alt="Highland Restore Ritual" />
+                                </div>
+                                <div class="program-card-content">
+                                    <h3>Highland Restore Ritual</h3>
+                                    <p class="program-description">Deep release, nervous system calm</p>
+                                </div>
+                            </div>
+                            <div class="program-card-with-image">
+                                <div class="program-image">
+                                    <img src="assets/images/general/international/thistle-3.webp" alt="Thistle & Flow Facial" />
+                                </div>
+                                <div class="program-card-content">
+                                    <h3>Thistle & Flow Facial</h3>
+                                    <p class="program-description">Detox, circulation, resilience</p>
+                                </div>
+                            </div>
+                            <div class="program-card-with-image">
+                                <div class="program-image">
+                                    <img src="assets/images/general/international/mist-1.webp" alt="Mist & Muscle Release" />
+                                </div>
+                                <div class="program-card-content">
+                                    <h3>Mist & Muscle Release</h3>
+                                    <p class="program-description">Soft melt, clarity, headache relief</p>
+                                </div>
+                            </div>
+                            <div class="program-card-with-image">
+                                <div class="program-image">
+                                    <img src="assets/images/general/international/heather-2.webp"
+                                        alt="Heather & Harmony Lift" />
+                                </div>
+                                <div class="program-card-content">
+                                    <h3>Heather & Harmony Lift</h3>
+                                    <p class="program-description">Gentle lift, symmetry, emotional balance</p>
+                                </div>
+                            </div>
+                            <div class="program-card-with-image">
+                                <div class="program-image">
+                                    <img src="assets/images/general/international/celtic-1.webp" alt="Celtic Radiance Ritual" />
+                                </div>
+                                <div class="program-card-content">
+                                    <h3>Celtic Radiance Ritual</h3>
+                                    <p class="program-description">Ancient energy, contour, sacred glow</p>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    <div class="program-card-with-image">
-                        <div class="program-image">
-                            <img src="assets/images/general/international/thistle-3.webp" alt="Thistle & Flow Facial" />
-                        </div>
-                        <div class="program-card-content">
-                            <h3>Thistle & Flow Facial</h3>
-                            <p class="program-description">Detox, circulation, resilience</p>
-                        </div>
-                    </div>
-                    <div class="program-card-with-image">
-                        <div class="program-image">
-                            <img src="assets/images/general/international/mist-1.webp" alt="Mist & Muscle Release" />
-                        </div>
-                        <div class="program-card-content">
-                            <h3>Mist & Muscle Release</h3>
-                            <p class="program-description">Soft melt, clarity, headache relief</p>
-                        </div>
-                    </div>
-                    <div class="program-card-with-image">
-                        <div class="program-image">
-                            <img src="assets/images/general/international/heather-2.webp"
-                                alt="Heather & Harmony Lift" />
-                        </div>
-                        <div class="program-card-content">
-                            <h3>Heather & Harmony Lift</h3>
-                            <p class="program-description">Gentle lift, symmetry, emotional balance</p>
-                        </div>
-                    </div>
-                    <div class="program-card-with-image">
-                        <div class="program-image">
-                            <img src="assets/images/general/international/celtic-1.webp" alt="Celtic Radiance Ritual" />
-                        </div>
-                        <div class="program-card-content">
-                            <h3>Celtic Radiance Ritual</h3>
-                            <p class="program-description">Ancient energy, contour, sacred glow</p>
-                        </div>
-                    </div>
+                    <button class="slider-arrow slider-arrow-right" onclick="slidePrograms('right', this)">›</button>
                 </div>
             </div>
 

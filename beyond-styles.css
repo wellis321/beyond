@@ -1249,7 +1249,7 @@ p {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    background: rgba(139, 90, 60, 0.8);
+    background: rgba(200, 104, 126, 0.8);
     color: white;
     border: none;
     width: 50px;
@@ -1266,7 +1266,7 @@ p {
 }
 
 .slider-arrow:hover {
-    background: rgba(139, 90, 60, 1);
+    background: rgba(200, 104, 126, 1);
     transform: translateY(-50%) scale(1.1);
 }
 

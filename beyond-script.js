@@ -440,17 +440,35 @@ window.addEventListener('unhandledrejection', function (e) {
 });
 
 // Program Slider Functionality
-let currentSlide = 0;
-const totalSlides = 7;
+// Track current slide position for each slider separately
+const sliderPositions = new Map();
 const slidesToShow = 3;
 
-function slidePrograms(direction) {
-    const slider = document.querySelector('.program-grid-with-images');
-    const sliderContainer = document.querySelector('.program-slider');
-    if (!slider || !sliderContainer) return;
+function slidePrograms(direction, buttonElement) {
+    // Find the slider container relative to the clicked button
+    const sliderContainer = buttonElement.closest('.program-slider-container');
+    if (!sliderContainer) return;
+
+    const slider = sliderContainer.querySelector('.program-grid-with-images');
+    const sliderWrapper = sliderContainer.querySelector('.program-slider');
+    if (!slider || !sliderWrapper) return;
+
+    // Get or initialize current slide position for this slider
+    const sliderId = sliderContainer.id || sliderContainer.getAttribute('data-slider-id') ||
+                     Array.from(document.querySelectorAll('.program-slider-container')).indexOf(sliderContainer).toString();
+
+    if (!sliderPositions.has(sliderId)) {
+        sliderPositions.set(sliderId, 0);
+    }
+
+    let currentSlide = sliderPositions.get(sliderId);
+
+    // Calculate total slides for this specific slider
+    const cards = slider.querySelectorAll('.program-card-with-image');
+    const totalSlides = cards.length;
 
     // Get container width and calculate exact card width
-    const containerWidth = sliderContainer.getBoundingClientRect().width;
+    const containerWidth = sliderWrapper.getBoundingClientRect().width;
     const gap = 40; // 2.5rem = 40px
     // Card width is (containerWidth - 2*gap) / 3 for 3 columns
     const cardWidth = (containerWidth - (2 * gap)) / 3;
@@ -459,7 +477,7 @@ function slidePrograms(direction) {
     if (direction === 'left') {
         currentSlide = currentSlide - 1;
         if (currentSlide < 0) {
-            currentSlide = totalSlides - slidesToShow;
+            currentSlide = Math.max(0, totalSlides - slidesToShow);
         }
     } else {
         currentSlide = currentSlide + 1;
@@ -467,6 +485,9 @@ function slidePrograms(direction) {
             currentSlide = 0;
         }
     }
+
+    // Update stored position
+    sliderPositions.set(sliderId, currentSlide);
 
     const translateX = -currentSlide * slideDistance;
     slider.style.transform = `translateX(${translateX}px)`;
