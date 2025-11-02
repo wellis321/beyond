@@ -780,36 +780,65 @@ p {
 /* About Section */
 .about-section {
     padding: 6rem 0;
-    background: linear-gradient(135deg, #E8F4F8 0%, #D6E9F0 100%);
+    background-image: url('assets/images/general/scottish-pics/general2.webp');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     position: relative;
     overflow: hidden;
+}
+
+.about-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(255, 255, 255, 0.4);
+    z-index: 0;
 }
 
 .about-content {
     max-width: 800px;
     margin: 0 auto;
     position: relative;
-    z-index: 2;
+    z-index: 1;
 }
 
 .about-text .section-title,
 .about-text h3 {
-    color: #5a6c7d;
+    color: #2c3e50;
+}
+
+.about-text h3 {
+    text-align: center;
+}
+
+.about-text>p:not(.about-quote) {
+    color: white;
+    font-weight: 500;
 }
 
 .about-quote {
     font-size: 1.5rem;
     font-style: italic;
-    color: #F4A460;
+    color: #2c3e50;
     text-align: center;
     margin: 2rem 0;
+    font-weight: 600;
 }
 
 .about-challenges {
-    background: rgba(255, 255, 255, 0.7);
+    background: rgba(255, 255, 255, 0.85);
     padding: 2rem;
     border-radius: 15px;
     margin: 2rem 0;
+}
+
+.about-challenges p {
+    color: #2c3e50;
+    font-weight: 500;
 }
 
 .about-transformation {
@@ -821,7 +850,7 @@ p {
 }
 
 .about-transformation h4 {
-    color: #F4A460;
+    color: #c8687e;
     margin-bottom: 1rem;
 }
 
@@ -838,7 +867,7 @@ p {
 
 .about-transformation li::before {
     content: '✓';
-    color: #F4A460;
+    color: #c8687e;
     font-weight: bold;
     position: absolute;
     left: 0;
@@ -1055,74 +1084,25 @@ p {
     margin: 4rem 0;
     border-radius: 20px;
     overflow: hidden;
-    background: linear-gradient(to bottom,
-            #E8EDF2 0%,
-            /* Very light sky blue-grey */
-            #E3E8ED 20%,
-            /* Light misty grey */
-            #E8E0F0 40%,
-            /* Soft lavender (heather tones) */
-            #E5DBEB 60%,
-            /* Light heather purple */
-            #E0D4E6 80%,
-            /* Soft heather */
-            #DBCEE0 100%
-            /* Light heather base */
-        );
-    background-size: 100% 100%;
+    background-image: url('assets/images/general/scottish-pics/general sea -2.webp');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
-/* Add mountain silhouettes using pseudo-elements */
 .program-series.scottish-heritage-bg::before {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    height: 40%;
-    background:
-        linear-gradient(to right,
-            transparent 0%,
-            rgba(180, 170, 190, 0.08) 15%,
-            rgba(190, 175, 200, 0.1) 30%,
-            rgba(180, 170, 190, 0.08) 45%,
-            transparent 60%,
-            rgba(185, 172, 195, 0.09) 75%,
-            rgba(180, 170, 190, 0.06) 90%,
-            transparent 100%),
-        linear-gradient(135deg,
-            transparent 30%,
-            rgba(175, 165, 185, 0.05) 50%,
-            transparent 70%);
-    clip-path: polygon(0% 100%,
-            15% 85%,
-            25% 90%,
-            35% 75%,
-            45% 80%,
-            55% 70%,
-            65% 75%,
-            75% 68%,
-            85% 72%,
-            95% 65%,
-            100% 100%);
-    pointer-events: none;
-}
-
-/* Add subtle heather texture overlay */
-.program-series.scottish-heritage-bg::after {
     content: '';
     position: absolute;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
-    background-image:
-        radial-gradient(circle at 20% 50%, rgba(220, 200, 230, 0.05) 0%, transparent 50%),
-        radial-gradient(circle at 60% 30%, rgba(230, 210, 240, 0.04) 0%, transparent 50%),
-        radial-gradient(circle at 80% 70%, rgba(210, 190, 220, 0.06) 0%, transparent 50%),
-        radial-gradient(circle at 40% 80%, rgba(225, 205, 235, 0.05) 0%, transparent 50%);
-    pointer-events: none;
+    background: rgba(255, 255, 255, 0.4);
+    z-index: 0;
+    border-radius: 20px;
 }
+
+/* Overlay removed - using image background instead */
 
 /* Ensure content appears above background */
 .program-series.scottish-heritage-bg .series-title,
