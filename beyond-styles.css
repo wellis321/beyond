@@ -135,7 +135,7 @@ p {
 /* Hero Section */
 .hero {
     min-height: auto;
-    background: linear-gradient(135deg, #E8F4F8 0%, #D6E9F0 100%);
+    background: linear-gradient(135deg, #f8f4f0 0%, #e8ddd4 100%);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -167,37 +167,62 @@ p {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 4rem;
-    align-items: center;
+    align-items: stretch;
     position: relative;
     z-index: 5;
 }
 
 .hero-text {
-    text-align: left;
+    text-align: center;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
+    align-items: center;
+    position: relative;
+    height: 100%;
 }
 
 .hero-title {
     color: #5B7BA0;
-    margin-bottom: 1.5rem;
-    font-size: 3.5rem;
-    line-height: 1.3;
+    margin-bottom: 0;
+    margin-top: orem;
+    font-size: 3rem;
+    line-height: 1.2;
     font-family: Arial, sans-serif;
     font-weight: 300;
-    letter-spacing: -0.02em;
+    letter-spacing: -0.04em;
     opacity: 0.9;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
 }
 
 .hero-subtitle {
     font-size: 1.3rem;
     color: #5a6c7d;
-    margin-bottom: 2.5rem;
+    margin-bottom: 0;
+    margin-top: 4rem;
     font-style: italic;
     font-weight: 300;
     letter-spacing: 0.01em;
     opacity: 0.85;
+    position: absolute;
+    top: 5%;
+    left: 50%;
+    transform: translateX(-50%);
+    white-space: nowrap;
+}
+
+.hero-text .cta-button {
+    position: absolute;
+    bottom: 15%;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-top: 0;
+    white-space: nowrap;
+    width: auto;
 }
 
 .hero-image {
@@ -243,93 +268,133 @@ p {
     pointer-events: none;
 }
 
-/* Base Cloud Styles */
+/* Base Cloud Styles - More realistic */
 .cloud {
     position: absolute;
-    background: rgba(255, 255, 255, 0.4);
-    border-radius: 30px;
-    opacity: 0.5;
+    background: rgba(255, 255, 255, 0.7);
+    opacity: 0.7;
     animation: float 20s infinite linear;
-    box-shadow: 0 2px 15px rgba(255, 255, 255, 0.2);
-    filter: blur(1px);
+    filter: blur(3px);
+    border-radius: 50%;
+    box-shadow:
+        25px 20px 0 -8px rgba(255, 255, 255, 0.6),
+        -25px 15px 0 -8px rgba(255, 255, 255, 0.6),
+        15px -20px 0 -8px rgba(255, 255, 255, 0.55),
+        -15px -12px 0 -8px rgba(255, 255, 255, 0.55),
+        40px 8px 0 -12px rgba(255, 255, 255, 0.5),
+        -40px 25px 0 -12px rgba(255, 255, 255, 0.5),
+        20px -15px 0 -10px rgba(255, 255, 255, 0.5),
+        -35px -8px 0 -10px rgba(255, 255, 255, 0.5),
+        50px 12px 0 -15px rgba(255, 255, 255, 0.45),
+        -50px 18px 0 -15px rgba(255, 255, 255, 0.45);
 }
 
 .cloud::before,
 .cloud::after {
     content: '';
     position: absolute;
-    background: rgba(255, 255, 255, 0.4);
-    border-radius: 30px;
-    filter: blur(0.5px);
+    background: rgba(255, 255, 255, 0.6);
+    border-radius: 50%;
+    filter: blur(2px);
+    box-shadow:
+        15px 10px 0 -3px rgba(255, 255, 255, 0.5),
+        -15px 8px 0 -3px rgba(255, 255, 255, 0.5),
+        8px -10px 0 -3px rgba(255, 255, 255, 0.45),
+        -8px -8px 0 -3px rgba(255, 255, 255, 0.45);
 }
 
-/* Cloud Size Variants */
+/* Cloud Size Variants - Larger and more realistic */
 .cloud-small {
-    width: 40px;
-    height: 20px;
-    opacity: 0.35;
+    width: 120px;
+    height: 40px;
+    opacity: 0.5;
+    border-radius: 60px / 40px;
 }
 
 .cloud-medium {
-    width: 80px;
-    height: 40px;
-    opacity: 0.45;
+    width: 200px;
+    height: 80px;
+    opacity: 0.6;
+    border-radius: 100px / 80px;
 }
 
 .cloud-large {
-    width: 120px;
-    height: 60px;
-    opacity: 0.5;
+    width: 300px;
+    height: 120px;
+    opacity: 0.65;
+    border-radius: 150px / 120px;
 }
 
-/* Special Cloud Types */
+/* Special Cloud Types - More realistic shapes */
 .cloud-fluffy {
-    width: 100px;
-    height: 50px;
-    border-radius: 40px;
-    opacity: 0.5;
+    width: 250px;
+    height: 100px;
+    border-radius: 125px / 100px;
+    opacity: 0.65;
 }
 
 .cloud-fluffy::before {
-    width: 70px;
-    height: 70px;
-    border-radius: 70px;
-    top: -35px;
-    left: 15px;
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    top: -60px;
+    left: 30px;
+    filter: blur(3px);
+    box-shadow:
+        25px 20px 0 -8px rgba(255, 255, 255, 0.5),
+        -25px 15px 0 -8px rgba(255, 255, 255, 0.5),
+        15px -20px 0 -8px rgba(255, 255, 255, 0.45),
+        35px 10px 0 -10px rgba(255, 255, 255, 0.4);
 }
 
 .cloud-fluffy::after {
-    width: 80px;
-    height: 60px;
-    border-radius: 80px;
-    top: -20px;
-    right: 10px;
+    width: 160px;
+    height: 120px;
+    border-radius: 50%;
+    top: -50px;
+    right: 20px;
+    filter: blur(3px);
+    box-shadow:
+        30px 18px 0 -8px rgba(255, 255, 255, 0.5),
+        -30px 12px 0 -8px rgba(255, 255, 255, 0.5),
+        18px -18px 0 -8px rgba(255, 255, 255, 0.45),
+        -18px -12px 0 -8px rgba(255, 255, 255, 0.45);
 }
 
 .cloud-wispy {
-    width: 60px;
-    height: 15px;
-    border-radius: 20px;
-    opacity: 0.3;
-    background: rgba(255, 255, 255, 0.3);
+    width: 180px;
+    height: 30px;
+    border-radius: 90px / 30px;
+    opacity: 0.5;
+    background: rgba(255, 255, 255, 0.5);
 }
 
 .cloud-wispy::before {
-    width: 35px;
-    height: 35px;
-    border-radius: 35px;
-    top: -20px;
-    left: 10px;
+    width: 70px;
+    height: 60px;
+    border-radius: 50%;
+    top: -30px;
+    left: 20px;
     background: rgba(255, 255, 255, 0.6);
+    filter: blur(2px);
+    box-shadow:
+        12px 8px 0 -4px rgba(255, 255, 255, 0.45),
+        -12px 6px 0 -4px rgba(255, 255, 255, 0.45),
+        6px -8px 0 -4px rgba(255, 255, 255, 0.4);
 }
 
 .cloud-wispy::after {
-    width: 25px;
-    height: 25px;
-    border-radius: 25px;
-    top: -15px;
-    right: 15px;
-    background: rgba(255, 255, 255, 0.5);
+    width: 50px;
+    height: 45px;
+    border-radius: 50%;
+    top: -25px;
+    right: 25px;
+    background: rgba(255, 255, 255, 0.55);
+    filter: blur(2px);
+    box-shadow:
+        10px 7px 0 -3px rgba(255, 255, 255, 0.45),
+        -10px 5px 0 -3px rgba(255, 255, 255, 0.45),
+        5px -7px 0 -3px rgba(255, 255, 255, 0.4);
 }
 
 /* Individual Cloud Positions and Timing */
@@ -341,17 +406,19 @@ p {
 }
 
 .cloud-1::before {
-    width: 25px;
-    height: 25px;
-    top: -15px;
-    left: 5px;
+    width: 60px;
+    height: 60px;
+    top: -30px;
+    left: 20px;
+    filter: blur(2px);
 }
 
 .cloud-1::after {
-    width: 20px;
-    height: 15px;
-    top: -8px;
-    right: 5px;
+    width: 50px;
+    height: 45px;
+    top: -20px;
+    right: 15px;
+    filter: blur(2px);
 }
 
 .cloud-2 {
@@ -362,17 +429,19 @@ p {
 }
 
 .cloud-2::before {
-    width: 80px;
-    height: 80px;
-    top: -40px;
-    left: 20px;
+    width: 120px;
+    height: 120px;
+    top: -60px;
+    left: 40px;
+    filter: blur(3px);
 }
 
 .cloud-2::after {
-    width: 90px;
-    height: 70px;
-    top: -25px;
-    right: 20px;
+    width: 130px;
+    height: 100px;
+    top: -50px;
+    right: 30px;
+    filter: blur(3px);
 }
 
 .cloud-3 {
@@ -383,17 +452,19 @@ p {
 }
 
 .cloud-3::before {
-    width: 45px;
-    height: 45px;
-    top: -22px;
-    left: 8px;
+    width: 80px;
+    height: 80px;
+    top: -40px;
+    left: 30px;
+    filter: blur(2px);
 }
 
 .cloud-3::after {
-    width: 55px;
-    height: 35px;
-    top: -12px;
-    right: 8px;
+    width: 90px;
+    height: 70px;
+    top: -30px;
+    right: 25px;
+    filter: blur(2px);
 }
 
 .cloud-4 {
@@ -404,17 +475,19 @@ p {
 }
 
 .cloud-4::before {
-    width: 20px;
-    height: 20px;
-    top: -12px;
-    left: 6px;
+    width: 55px;
+    height: 55px;
+    top: -28px;
+    left: 25px;
+    filter: blur(2px);
 }
 
 .cloud-4::after {
-    width: 18px;
-    height: 12px;
-    top: -6px;
-    right: 6px;
+    width: 50px;
+    height: 40px;
+    top: -20px;
+    right: 20px;
+    filter: blur(2px);
 }
 
 .cloud-5 {
@@ -425,17 +498,19 @@ p {
 }
 
 .cloud-5::before {
-    width: 85px;
-    height: 85px;
-    top: -42px;
-    left: 18px;
+    width: 140px;
+    height: 140px;
+    top: -70px;
+    left: 50px;
+    filter: blur(3px);
 }
 
 .cloud-5::after {
-    width: 95px;
-    height: 75px;
-    top: -28px;
-    right: 18px;
+    width: 150px;
+    height: 120px;
+    top: -60px;
+    right: 40px;
+    filter: blur(3px);
 }
 
 .cloud-6 {
@@ -446,17 +521,19 @@ p {
 }
 
 .cloud-6::before {
-    width: 50px;
-    height: 50px;
-    top: -25px;
-    left: 10px;
+    width: 90px;
+    height: 90px;
+    top: -45px;
+    left: 35px;
+    filter: blur(2px);
 }
 
 .cloud-6::after {
-    width: 60px;
-    height: 40px;
-    top: -15px;
-    right: 10px;
+    width: 100px;
+    height: 80px;
+    top: -35px;
+    right: 30px;
+    filter: blur(2px);
 }
 
 .cloud-7 {
@@ -467,17 +544,19 @@ p {
 }
 
 .cloud-7::before {
-    width: 22px;
-    height: 22px;
-    top: -14px;
-    left: 7px;
+    width: 58px;
+    height: 58px;
+    top: -29px;
+    left: 28px;
+    filter: blur(2px);
 }
 
 .cloud-7::after {
-    width: 20px;
-    height: 14px;
-    top: -7px;
-    right: 7px;
+    width: 52px;
+    height: 42px;
+    top: -21px;
+    right: 22px;
+    filter: blur(2px);
 }
 
 .cloud-8 {
@@ -533,6 +612,10 @@ p {
 .cta-button.primary:hover {
     transform: translateY(-2px);
     box-shadow: 0 6px 20px rgba(200, 104, 126, 0.4);
+}
+
+.hero-text .cta-button.primary:hover {
+    transform: translate(-50%, -2px);
 }
 
 .cta-button.secondary {
