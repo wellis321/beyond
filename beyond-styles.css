@@ -763,6 +763,10 @@ p {
     transition: transform 0.3s ease;
 }
 
+.method-image img.tone-down {
+    filter: brightness(0.85) contrast(0.95);
+}
+
 .method-item:hover .method-image img {
     transform: scale(1.05);
 }
