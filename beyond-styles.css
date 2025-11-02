@@ -134,14 +134,14 @@ p {
 
 /* Hero Section */
 .hero {
-    min-height: 100vh;
+    min-height: auto;
     background: linear-gradient(135deg, #E8F4F8 0%, #D6E9F0 100%);
     display: flex;
     align-items: center;
     justify-content: center;
     position: relative;
     overflow: hidden;
-    padding-top: 80px;
+    padding: 120px 0 3rem 0;
 }
 
 .hero::before {
@@ -561,7 +561,7 @@ p {
 
 /* Story Section */
 .story-section {
-    padding: 6rem 0;
+    padding: 3rem 0;
     background: white;
 }
 
