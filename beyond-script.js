@@ -438,3 +438,36 @@ window.addEventListener('error', function (e) {
 window.addEventListener('unhandledrejection', function (e) {
     console.error('Unhandled promise rejection:', e.reason);
 });
+
+// Program Slider Functionality
+let currentSlide = 0;
+const totalSlides = 7;
+const slidesToShow = 3;
+
+function slidePrograms(direction) {
+    const slider = document.querySelector('.program-grid-with-images');
+    const sliderContainer = document.querySelector('.program-slider');
+    if (!slider || !sliderContainer) return;
+
+    // Get container width and calculate exact card width
+    const containerWidth = sliderContainer.getBoundingClientRect().width;
+    const gap = 40; // 2.5rem = 40px
+    // Card width is (containerWidth - 2*gap) / 3 for 3 columns
+    const cardWidth = (containerWidth - (2 * gap)) / 3;
+    const slideDistance = cardWidth + gap;
+
+    if (direction === 'left') {
+        currentSlide = currentSlide - 1;
+        if (currentSlide < 0) {
+            currentSlide = totalSlides - slidesToShow;
+        }
+    } else {
+        currentSlide = currentSlide + 1;
+        if (currentSlide > totalSlides - slidesToShow) {
+            currentSlide = 0;
+        }
+    }
+
+    const translateX = -currentSlide * slideDistance;
+    slider.style.transform = `translateX(${translateX}px)`;
+}

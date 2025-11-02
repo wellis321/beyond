@@ -175,6 +175,51 @@
         </div>
     </section>
 
+    <!-- About Section -->
+    <section id="about" class="about-section">
+        <div class="clouds-container">
+            <div class="cloud cloud-small cloud-1"></div>
+            <div class="cloud cloud-large cloud-2"></div>
+            <div class="cloud cloud-medium cloud-3"></div>
+            <div class="cloud cloud-small cloud-4"></div>
+            <div class="cloud cloud-large cloud-5"></div>
+            <div class="cloud cloud-medium cloud-6"></div>
+            <div class="cloud cloud-small cloud-7"></div>
+            <div class="cloud cloud-fluffy cloud-8"></div>
+            <div class="cloud cloud-wispy cloud-9"></div>
+        </div>
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text">
+                    <h2 class="section-title">Above and beyond</h2>
+                    <h3>Why I Created beyond</h3>
+                    <p class="about-quote">"I didn't just want change. I needed it."</p>
+                    <div class="about-challenges">
+                        <p>Signs of ageing. Constant tension. Low confidence. I tried EVERYTHING—creams, facials,
+                            filler. Nothing worked… until I went beyond quick fixes.</p>
+                    </div>
+                    <div class="about-transformation">
+                        <h4>Natural, daily practices changed everything:</h4>
+                        <ul>
+                            <li>Lifted cheeks and jaw</li>
+                            <li>Brighter, smoother skin</li>
+                            <li>Less puffiness</li>
+                            <li>Confidence returning</li>
+                            <li>A face that felt like mine again</li>
+                        </ul>
+                    </div>
+                    <p>I trained, qualified (CPD-accredited), studied osteopathy and breathwork, and became a recognised
+                        practitioner.</p>
+                    <p>Now I help others go beyond ageing, beyond stress and beyond self-doubt—naturally and joyfully.
+                    </p>
+                    <button class="cta-button secondary"
+                        onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'})">Work With
+                        Me</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Face Analysis Section -->
     <section id="face-analysis" class="face-analysis-section">
         <div class="container">
@@ -430,116 +475,238 @@
         <div class="container">
             <h2 class="section-title">beyond programmes</h2>
 
-            <!-- Benefits Grid -->
-            <div class="benefits-section">
-                <h3>What beyond Can Do For You</h3>
-                <p class="benefits-subtitle">Visible results + deep wellbeing</p>
-                <div class="benefits-grid-large">
-                    <div class="benefit-card">
-                        <h4>Lift + tone</h4>
+            <!-- Signature In-Person Workshop Series -->
+            <div class="program-series">
+                <h3 class="series-title">Signature In-Person Workshop Series</h3>
+                <p class="series-description">For all ages and genders across Scotland's central belt</p>
+
+                <div class="program-slider-container">
+                    <button class="slider-arrow slider-arrow-left" onclick="slidePrograms('left')">‹</button>
+                    <div class="program-slider">
+                        <div class="program-grid-with-images">
+                            <div class="program-card-with-image">
+                                <div class="program-image">
+                                    <img src="assets/images/general/slider-images/full face rejuvination.jpg"
+                                        alt="Full Face Rejuvenation" />
+                                </div>
+                                <div class="program-card-content">
+                                    <h3>Full Face Rejuvenation – Beyond Renewal</h3>
+                                    <p class="program-focus"><strong>Focus:</strong> Complete shoulders-up workout +
+                                        relaxation
+                                    </p>
+                                    <p class="program-method"><strong>Method:</strong> Face yoga, gua sha, lymphatic
+                                        sweep,
+                                        acupressure, posture reset</p>
+                                    <p class="program-benefits"><strong>Benefits:</strong> Tone, lift, circulation,
+                                        glow,
+                                        tension release</p>
+                                    <p class="program-testimonial">"A natural facelift and spa in one - my whole face
+                                        lit up."
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="program-card-with-image">
+                                <div class="program-image">
+                                    <img src="assets/images/general/slider-images/eyes-forehead-1.webp"
+                                        alt="Strong Eyelids & Smooth Forehead" />
+                                </div>
+                                <div class="program-card-content">
+                                    <h3>Strong Eyelids & Smooth Forehead – Beyond Lift</h3>
+                                    <p class="program-focus"><strong>Focus:</strong> Upper face tension and droop</p>
+                                    <p class="program-method"><strong>Method:</strong> Eye activation, forehead
+                                        smoothing,
+                                        fascia release, scalp massage</p>
+                                    <p class="program-benefits"><strong>Benefits:</strong> Brighter eyes, lifted brows,
+                                        reduced
+                                        lines, relaxed forehead</p>
+                                    <p class="program-testimonial">"This feels like an anti-squint, anti-stress for
+                                        screen users
+                                        and frowners!"</p>
+                                </div>
+                            </div>
+
+                            <div class="program-card-with-image">
+                                <div class="program-image">
+                                    <img src="assets/images/general/slider-images/lips-cheeks.webp"
+                                        alt="Radiant Eyes & Cheeks" />
+                                </div>
+                                <div class="program-card-content">
+                                    <h3>Radiant Eyes & Cheeks – Beyond Glow</h3>
+                                    <p class="program-focus"><strong>Focus:</strong> Mid-face rejuvenation and
+                                        circulation</p>
+                                    <p class="program-method"><strong>Method:</strong> Cheek sculpting, lymph drainage,
+                                        under-eye release, breathwork</p>
+                                    <p class="program-benefits"><strong>Benefits:</strong> Reduced puffiness, colour
+                                        return,
+                                        lifted cheeks, youthful energy</p>
+                                    <p class="program-testimonial">"I saw my natural blush without makeup—fresh, bright,
+                                        alive."
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="program-card-with-image">
+                                <div class="program-image">
+                                    <img src="assets/images/general/slider-images/happy-smile-rounded-cheeks.webp"
+                                        alt="Happy Smile & Rounded Cheeks" />
+                                </div>
+                                <div class="program-card-content">
+                                    <h3>Happy Smile & Rounded Cheeks – Beyond Joy</h3>
+                                    <p class="program-focus"><strong>Focus:</strong> Mouth area, jaw tension, smile
+                                        muscles</p>
+                                    <p class="program-method"><strong>Method:</strong> Jaw release, mouth corner lift,
+                                        buccal
+                                        massage, tongue posture</p>
+                                    <p class="program-benefits"><strong>Benefits:</strong> Softer jawline, lifted smile,
+                                        plumper
+                                        cheeks, no tension</p>
+                                    <p class="program-testimonial">"This was an emotional release meets facial toning -
+                                        I felt
+                                        good inside and out."</p>
+                                </div>
+                            </div>
+
+                            <div class="program-card-with-image">
+                                <div class="program-image">
+                                    <img src="assets/images/general/slider-images/chin and neck.jpg"
+                                        alt="Sculpted Chin / Neck" />
+                                </div>
+                                <div class="program-card-content">
+                                    <h3>Sculpted Chin / Neck – Beyond Gravity</h3>
+                                    <p class="program-focus"><strong>Focus:</strong> Jawline, double chin, neck tone</p>
+                                    <p class="program-method"><strong>Method:</strong> Neck stretches, platysma toning,
+                                        gua sha
+                                        sculpting, lymph drainage</p>
+                                    <p class="program-benefits"><strong>Benefits:</strong> Defined jaw, smoother neck,
+                                        reduced
+                                        sagging, improved posture</p>
+                                    <p class="program-testimonial">"I saw a more elegant, strong profile - confidence
+                                        you could
+                                        see."</p>
+                                </div>
+                            </div>
+
+                            <div class="program-card-with-image">
+                                <div class="program-image">
+                                    <img src="assets/images/general/slider-images/neck-shoulders-1.webp"
+                                        alt="Sculpted Shoulders & Neck" class="tone-down-image" />
+                                </div>
+                                <div class="program-card-content">
+                                    <h3>Sculpted Shoulders & Neck – Beyond Release</h3>
+                                    <p class="program-focus"><strong>Focus:</strong> Posture and fascia from shoulders
+                                        upward
+                                    </p>
+                                    <p class="program-method"><strong>Method:</strong> Osteopathic stretches,
+                                        acupressure, chest
+                                        opening, spinal alignment</p>
+                                    <p class="program-benefits"><strong>Benefits:</strong> Taller posture, less tension,
+                                        natural
+                                        facelift effect, deeper breath</p>
+                                    <p class="program-testimonial">"I didn't know how heavy my shoulders were until this
+                                        moment."</p>
+                                </div>
+                            </div>
+
+                            <div class="program-card-with-image">
+                                <div class="program-image">
+                                    <img src="assets/images/general/slider-images/relax-stress.jpg"
+                                        alt="Relaxation & Stress Release" />
+                                </div>
+                                <div class="program-card-content">
+                                    <h3>Relaxation & Stress Release – Beyond Calm</h3>
+                                    <p class="program-focus"><strong>Focus:</strong> Nervous system + emotional release
+                                    </p>
+                                    <p class="program-method"><strong>Method:</strong> Breathwork, gentle holds,
+                                        pressure
+                                        points, slow massage, visualisation</p>
+                                    <p class="program-benefits"><strong>Benefits:</strong> Stress reduction, better
+                                        sleep,
+                                        softer features, glowing skin</p>
+                                    <p class="program-testimonial">"This is beyond skincare - it's emotional therapy
+                                        through
+                                        touch."</p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="benefit-card">
-                        <h4>Smooth lines</h4>
-                    </div>
-                    <div class="benefit-card">
-                        <h4>Radiance + glow</h4>
-                    </div>
-                    <div class="benefit-card">
-                        <h4>Reduce puffiness</h4>
-                    </div>
-                    <div class="benefit-card">
-                        <h4>Release jaw tension</h4>
-                    </div>
-                    <div class="benefit-card">
-                        <h4>Better posture</h4>
-                    </div>
-                    <div class="benefit-card">
-                        <h4>Collagen support</h4>
-                    </div>
-                    <div class="benefit-card">
-                        <h4>Relaxation + confidence</h4>
-                    </div>
-                    <div class="benefit-card">
-                        <h4>Ease sinus/facial discomfort</h4>
-                    </div>
+                    <button class="slider-arrow slider-arrow-right" onclick="slidePrograms('right')">›</button>
                 </div>
-                <p class="benefits-conclusion">This goes beyond beauty—into strength, calm and connection.</p>
             </div>
 
-            <!-- How We Work Together -->
-            <div class="work-together">
-                <h3>How We Work Together</h3>
-                <div class="work-grid">
-                    <div class="work-item">
-                        <h4>1:1 Online Sessions</h4>
-                        <p>Bespoke and deeply personalised.</p>
+            <!-- Beyond Time Online International Series -->
+            <div class="program-series">
+                <h3 class="series-title">Beyond Time Online International Series</h3>
+                <div class="program-details">
+                    <div class="program-card">
+                        <h3>25–34: "Stress & Tech Face" – Beyond Burnout</h3>
+                        <p class="program-description">Digital detox, jaw/eye strain, prevention</p>
+                        <p class="program-includes-text"><strong>Includes:</strong> Tension release, gua sha for
+                            puffiness, posture reset, lymph flow</p>
                     </div>
-                    <div class="work-item">
-                        <h4>Group Classes</h4>
-                        <p>Relaxed, supportive and fun.</p>
+                    <div class="program-card">
+                        <h3>35–55: "Structure & Lift" – Beyond Gravity</h3>
+                        <p class="program-description">Aging, contour loss, midlife reset</p>
+                        <p class="program-includes-text"><strong>Includes:</strong> Osteo alignment, sculpting massage,
+                            collagen boost, fascia release</p>
                     </div>
-                    <div class="work-item">
-                        <h4>Daily Rituals & Programs</h4>
-                        <p>Simple routines = lasting results.</p>
+                    <div class="program-card">
+                        <h3>55+: "Gentle Rebuild" – Beyond Age</h3>
+                        <p class="program-description">Thinning skin, elasticity, confidence</p>
+                        <p class="program-includes-text"><strong>Includes:</strong> Gentle lymph flow, breath-led
+                            release, low-pressure gua sha, tone focus</p>
                     </div>
                 </div>
-                <p class="results-note">Most people see changes in just a few sessions.</p>
-                <p class="results-note">Just 10 minutes a day can transform your face.</p>
-                <button class="cta-button primary"
-                    onclick="document.getElementById('programs').scrollIntoView({behavior: 'smooth'})">View
-                    Programs</button>
             </div>
 
-            <!-- Program Details -->
-            <div class="program-details">
-                <div class="program-card featured">
-                    <h3>One-to-One Zoom Programme</h3>
-                    <p class="program-duration">4 x 45 mins over 1 month</p>
-                    <p class="program-description">Tailored support + sample products + worksheets</p>
-                    <div class="program-benefits">
-                        <p>• Noticeable lift, tone, radiance</p>
-                        <p>• Build routines you can maintain yourself</p>
+            <!-- Scottish Heritage Series -->
+            <div class="program-series">
+                <h3 class="series-title">Scottish Heritage Series: Beyond the Mists of Time</h3>
+                <p class="series-description">In-person Workshops & Ritual Facials across the UK</p>
+                <div class="program-details">
+                    <div class="program-card">
+                        <h3>The Selkie Glow Ritual</h3>
+                        <p class="program-description">Marine oils, flowing gua sha, hydration + renewal</p>
                     </div>
-                    <div class="program-includes">
-                        <h4>Includes:</h4>
-                        <ul>
-                            <li>Personal consultation</li>
-                            <li>Weekly live sessions</li>
-                            <li>Custom exercises & tools</li>
-                            <li>Progress reviews</li>
-                            <li>WhatsApp/email support</li>
-                        </ul>
+                    <div class="program-card">
+                        <h3>Cailleach's Winter Rejuvenation</h3>
+                        <p class="program-description">Deep release, warming stones, seasonal repair</p>
                     </div>
-                    <p class="program-note">Each session includes warm-up, cool-down, posture work and holistic
-                        lifestyle advice (sleep, stress, nutrition, supplements).</p>
+                    <div class="program-card">
+                        <h3>Faerie Forest Lymphatic Flow</h3>
+                        <p class="program-description">Herbal infusions, feather-light drainage, nature ambience</p>
+                    </div>
+                    <div class="program-card">
+                        <h3>Highland Warrior Sculpting Session</h3>
+                        <p class="program-description">Powerful sculpting, bold strokes, invigorating oils</p>
+                    </div>
                 </div>
+            </div>
 
-                <div class="program-card">
-                    <h3>Weekly Online Group Workshops</h3>
-                    <p class="program-price">£20 (45 mins)</p>
-                    <div class="workshop-themes">
-                        <h4>Themes:</h4>
-                        <ul>
-                            <li>Full face rejuvenation</li>
-                            <li>Strong eyelids, toned cheeks</li>
-                            <li>Radiant eyes + smooth forehead</li>
-                            <li>Happy smile & rounded cheeks</li>
-                            <li>Sculpted chin/neck</li>
-                            <li>Relaxation & stress release</li>
-                        </ul>
+            <!-- Scottish Online International Series -->
+            <div class="program-series">
+                <h3 class="series-title">Scottish Online International Series</h3>
+                <div class="program-details">
+                    <div class="program-card">
+                        <h3>Highland Restore Ritual</h3>
+                        <p class="program-description">Deep release, nervous system calm</p>
                     </div>
-                    <p class="program-note">Step-by-step learning, personalised feedback, supportive community.</p>
-                    <p class="program-note">6–8 sessions recommended to master beyond techniques.</p>
-                    <p class="program-requirements">You'll need: facial oil/serum, gua sha tool, comfortable seat.</p>
-                </div>
-
-                <div class="program-card">
-                    <h3>Weekly Face Yoga Classes</h3>
-                    <p class="program-price">£25 per person / £250 per group (up to 12)</p>
-                    <p class="program-description">Live coaching + corrections + tailored variations</p>
-                    <p class="program-note">Includes warm-up, cool-down, posture and relaxation</p>
-                    <p class="program-requirements">You'll need: yoga mat, facial oil/serum, gua sha tool</p>
-                    <p class="program-note">(Hand mirrors provided)</p>
+                    <div class="program-card">
+                        <h3>Thistle & Flow Facial</h3>
+                        <p class="program-description">Detox, circulation, resilience</p>
+                    </div>
+                    <div class="program-card">
+                        <h3>Mist & Muscle Release</h3>
+                        <p class="program-description">Soft melt, clarity, headache relief</p>
+                    </div>
+                    <div class="program-card">
+                        <h3>Heather & Harmony Lift</h3>
+                        <p class="program-description">Gentle lift, symmetry, emotional balance</p>
+                    </div>
+                    <div class="program-card">
+                        <h3>Celtic Radiance Ritual</h3>
+                        <p class="program-description">Ancient energy, contour, sacred glow</p>
+                    </div>
                 </div>
             </div>
 
