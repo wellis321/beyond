@@ -625,7 +625,7 @@ p {
 .section-title {
     text-align: center;
     color: #2c3e50;
-    margin-bottom: 3rem;
+    margin-bottom: 1.5rem;
 }
 
 .philosophy-grid {
@@ -871,7 +871,7 @@ p {
 
 /* Programs Section */
 .programs-section {
-    padding: 6rem 0;
+    padding: 4rem 0;
     background: white;
 }
 
@@ -1067,7 +1067,7 @@ p {
     text-align: center;
     color: #2c3e50;
     font-size: 2rem;
-    margin-bottom: 1rem;
+    margin-bottom: 0.5rem;
     font-weight: 400;
 }
 
@@ -1075,7 +1075,7 @@ p {
     text-align: center;
     color: #5a6c7d;
     font-size: 1.1rem;
-    margin-bottom: 3rem;
+    margin-bottom: 1.5rem;
     font-style: italic;
 }
 
@@ -1177,6 +1177,10 @@ p {
 
 .program-image img.tone-down-image {
     filter: brightness(0.9) contrast(0.95) saturate(0.9);
+}
+
+.program-image img.warm-image {
+    filter: sepia(0.15) saturate(1.1) brightness(1.05);
 }
 
 .program-card-content {
