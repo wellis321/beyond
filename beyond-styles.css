@@ -261,45 +261,48 @@ p {
 /* Base Cloud Styles */
 .cloud {
     position: absolute;
-    background: rgba(255, 255, 255, 0.9);
-    border-radius: 50px;
-    opacity: 0.8;
+    background: rgba(255, 255, 255, 0.4);
+    border-radius: 30px;
+    opacity: 0.5;
     animation: float 20s infinite linear;
-    box-shadow: 0 2px 10px rgba(255, 255, 255, 0.3);
+    box-shadow: 0 2px 15px rgba(255, 255, 255, 0.2);
+    filter: blur(1px);
 }
 
 .cloud::before,
 .cloud::after {
     content: '';
     position: absolute;
-    background: rgba(255, 255, 255, 0.9);
-    border-radius: 50px;
+    background: rgba(255, 255, 255, 0.4);
+    border-radius: 30px;
+    filter: blur(0.5px);
 }
 
 /* Cloud Size Variants */
 .cloud-small {
     width: 40px;
     height: 20px;
-    opacity: 0.6;
+    opacity: 0.35;
 }
 
 .cloud-medium {
     width: 80px;
     height: 40px;
+    opacity: 0.45;
 }
 
 .cloud-large {
     width: 120px;
     height: 60px;
-    opacity: 0.9;
+    opacity: 0.5;
 }
 
 /* Special Cloud Types */
 .cloud-fluffy {
     width: 100px;
     height: 50px;
-    border-radius: 60px;
-    opacity: 0.85;
+    border-radius: 40px;
+    opacity: 0.5;
 }
 
 .cloud-fluffy::before {
@@ -321,9 +324,9 @@ p {
 .cloud-wispy {
     width: 60px;
     height: 15px;
-    border-radius: 30px;
-    opacity: 0.5;
-    background: rgba(255, 255, 255, 0.7);
+    border-radius: 20px;
+    opacity: 0.3;
+    background: rgba(255, 255, 255, 0.3);
 }
 
 .cloud-wispy::before {
@@ -792,18 +795,27 @@ p {
 /* About Section */
 .about-section {
     padding: 6rem 0;
-    background: linear-gradient(135deg, #f8f4f0 0%, #e8ddd4 100%);
+    background: linear-gradient(135deg, #E8F4F8 0%, #D6E9F0 100%);
+    position: relative;
+    overflow: hidden;
 }
 
 .about-content {
     max-width: 800px;
     margin: 0 auto;
+    position: relative;
+    z-index: 2;
+}
+
+.about-text .section-title,
+.about-text h3 {
+    color: #5a6c7d;
 }
 
 .about-quote {
     font-size: 1.5rem;
     font-style: italic;
-    color: #8B5A3C;
+    color: #F4A460;
     text-align: center;
     margin: 2rem 0;
 }
@@ -824,7 +836,7 @@ p {
 }
 
 .about-transformation h4 {
-    color: #8B5A3C;
+    color: #F4A460;
     margin-bottom: 1rem;
 }
 
@@ -841,10 +853,20 @@ p {
 
 .about-transformation li::before {
     content: '✓';
-    color: #8B5A3C;
+    color: #F4A460;
     font-weight: bold;
     position: absolute;
     left: 0;
+}
+
+.about-section .cta-button.secondary {
+    color: #F4A460;
+    border: 2px solid #F4A460;
+}
+
+.about-section .cta-button.secondary:hover {
+    background: #F4A460;
+    color: white;
 }
 
 /* Programs Section */
@@ -855,6 +877,10 @@ p {
 
 .benefits-section {
     margin-bottom: 4rem;
+}
+
+.benefits-section h3 {
+    text-align: center;
 }
 
 .benefits-subtitle {
