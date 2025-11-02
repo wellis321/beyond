@@ -79,7 +79,7 @@ p {
 }
 
 .nav-logo h2 {
-    color: #C97E4A;
+    color: #c8687e;
     font-family: Arial, sans-serif;
     font-size: 1.8rem;
     font-weight: 400;
@@ -100,7 +100,7 @@ p {
 }
 
 .nav-link:hover {
-    color: #8B5A3C;
+    color: #c8687e;
 }
 
 .nav-link::after {
@@ -110,7 +110,7 @@ p {
     height: 2px;
     bottom: -5px;
     left: 0;
-    background-color: #8B5A3C;
+    background-color: #c8687e;
     transition: width 0.3s ease;
 }
 
@@ -168,7 +168,6 @@ p {
     grid-template-columns: 1fr 1fr;
     gap: 4rem;
     align-items: center;
-    min-height: 80vh;
 }
 
 .hero-text {
@@ -204,7 +203,6 @@ p {
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 100%;
     overflow: hidden;
     border-radius: 20px;
     background: linear-gradient(135deg, #E8F4F8 0%, #D6E9F0 100%);
@@ -540,24 +538,24 @@ p {
 }
 
 .cta-button.primary {
-    background: linear-gradient(135deg, #D4A574 0%, #C97E4A 100%);
+    background: linear-gradient(135deg, #d18a9c 0%, #c8687e 100%);
     color: white;
-    box-shadow: 0 4px 15px rgba(212, 165, 116, 0.3);
+    box-shadow: 0 4px 15px rgba(200, 104, 126, 0.3);
 }
 
 .cta-button.primary:hover {
     transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(212, 165, 116, 0.4);
+    box-shadow: 0 6px 20px rgba(200, 104, 126, 0.4);
 }
 
 .cta-button.secondary {
     background: transparent;
-    color: #8B5A3C;
-    border: 2px solid #8B5A3C;
+    color: #c8687e;
+    border: 2px solid #c8687e;
 }
 
 .cta-button.secondary:hover {
-    background: #8B5A3C;
+    background: #c8687e;
     color: white;
 }
 
@@ -587,7 +585,7 @@ p {
 
 .story-content .highlight {
     font-size: 1.4rem;
-    color: #8B5A3C;
+    color: #c8687e;
     font-weight: 600;
     margin-top: 2rem;
 }
@@ -612,7 +610,7 @@ p {
 }
 
 .benefit-item h3 {
-    color: #8B5A3C;
+    color: #c8687e;
     font-size: 1.3rem;
 }
 
@@ -649,7 +647,7 @@ p {
 }
 
 .philosophy-item h3 {
-    color: #8B5A3C;
+    color: #c8687e;
     font-size: 1.5rem;
     margin-bottom: 1rem;
 }
@@ -662,7 +660,7 @@ p {
 .philosophy-quote p {
     font-size: 1.4rem;
     font-style: italic;
-    color: #8B5A3C;
+    color: #c8687e;
     font-weight: 500;
 }
 
@@ -703,7 +701,7 @@ p {
 }
 
 .service-card h3 {
-    color: #8B5A3C;
+    color: #c8687e;
     font-size: 1.4rem;
     margin-bottom: 1rem;
     font-weight: 600;
@@ -775,7 +773,7 @@ p {
 }
 
 .method-item h3 {
-    color: #8B5A3C;
+    color: #c8687e;
     margin-bottom: 1rem;
 }
 
@@ -787,7 +785,7 @@ p {
 
 .method-conclusion .highlight {
     font-size: 1.3rem;
-    color: #8B5A3C;
+    color: #c8687e;
     font-weight: 600;
     margin-top: 1rem;
 }
@@ -908,7 +906,7 @@ p {
 
 .benefit-card:hover {
     transform: translateY(-5px);
-    background: #8B5A3C;
+    background: #c8687e;
     color: white;
 }
 
@@ -920,7 +918,7 @@ p {
 .benefits-conclusion {
     text-align: center;
     font-size: 1.2rem;
-    color: #8B5A3C;
+    color: #c8687e;
     font-weight: 500;
 }
 
@@ -946,7 +944,7 @@ p {
 }
 
 .work-item h4 {
-    color: #8B5A3C;
+    color: #c8687e;
     margin-bottom: 1rem;
 }
 
@@ -974,7 +972,7 @@ p {
 }
 
 .program-card.featured {
-    border-color: #8B5A3C;
+    border-color: #c8687e;
     transform: scale(1.05);
 }
 
@@ -988,7 +986,7 @@ p {
 }
 
 .program-card h3 {
-    color: #8B5A3C;
+    color: #c8687e;
     margin-bottom: 1rem;
 }
 
@@ -1001,7 +999,7 @@ p {
 .program-price {
     font-size: 1.3rem;
     font-weight: 700;
-    color: #8B5A3C;
+    color: #c8687e;
     margin-bottom: 1rem;
 }
 
@@ -1021,7 +1019,7 @@ p {
 }
 
 .program-includes h4 {
-    color: #8B5A3C;
+    color: #c8687e;
     margin-bottom: 0.5rem;
 }
 
@@ -1038,7 +1036,7 @@ p {
 
 .program-includes li::before {
     content: '→';
-    color: #8B5A3C;
+    color: #c8687e;
     position: absolute;
     left: 0;
 }
@@ -1147,9 +1145,9 @@ p {
     z-index: 2;
 }
 
-/* Match h3 colors to logo in Scottish Heritage section - using darker shade for accessibility */
+/* Match h3 colors to logo in Scottish Heritage section */
 .program-series.scottish-heritage-bg .program-card h3 {
-    color: #C97E4A;
+    color: #c8687e;
 }
 
 .series-title {
@@ -1295,7 +1293,7 @@ p {
 }
 
 .program-card-content h3 {
-    color: #8B5A3C;
+    color: #c8687e;
     margin-bottom: 1rem;
     font-size: 1.4rem;
 }
@@ -1311,11 +1309,11 @@ p {
 
 .program-testimonial {
     font-style: italic;
-    color: #8B5A3C;
+    color: #c8687e;
     margin-top: 1.5rem;
     padding: 1rem;
     background: #f8f4f0;
-    border-left: 1px solid #8B5A3C;
+    border-left: 1px solid #c8687e;
 }
 
 .program-includes-text {
@@ -1326,7 +1324,7 @@ p {
 }
 
 .workshop-themes h4 {
-    color: #8B5A3C;
+    color: #c8687e;
     margin-bottom: 0.5rem;
 }
 
@@ -1343,7 +1341,7 @@ p {
 
 .workshop-themes li::before {
     content: '•';
-    color: #8B5A3C;
+    color: #c8687e;
     position: absolute;
     left: 0;
 }
@@ -1368,7 +1366,7 @@ p {
 
 .coming-soon {
     font-size: 1.2rem;
-    color: #8B5A3C;
+    color: #c8687e;
     font-weight: 600;
 }
 
@@ -1420,7 +1418,7 @@ p {
 .form-group select:focus,
 .form-group textarea:focus {
     outline: none;
-    border-color: #8B5A3C;
+    border-color: #c8687e;
 }
 
 .contact-info {
@@ -1428,7 +1426,7 @@ p {
 }
 
 .contact-info h3 {
-    color: #8B5A3C;
+    color: #c8687e;
     margin-bottom: 2rem;
 }
 
@@ -1441,7 +1439,7 @@ p {
 .social-link {
     display: inline-block;
     padding: 1rem;
-    background: #8B5A3C;
+    background: #c8687e;
     color: white;
     text-decoration: none;
     border-radius: 10px;
@@ -1468,7 +1466,7 @@ p {
 }
 
 .footer-brand h3 {
-    color: #8B5A3C;
+    color: #c8687e;
     margin-bottom: 0.5rem;
 }
 
@@ -1484,7 +1482,7 @@ p {
 }
 
 .footer-links a:hover {
-    color: #8B5A3C;
+    color: #c8687e;
 }
 
 .footer-bottom {
